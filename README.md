@@ -6,3 +6,5 @@ web page by just requesting a web page through this service.
 
 Current usage is making a requst to `/<your_webpage_url>` and it will return 
 the reader view html of the `your_webpage_url`
+
+Available in a docker image at https://hub.docker.com/r/mrhampson/reader-view
