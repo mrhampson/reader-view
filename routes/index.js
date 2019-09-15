@@ -8,12 +8,14 @@ var Readability = require('readability')
 router.get('/*', function (req, res, next) {
   if (req.path.startsWith('/') && req.path.length > 1) {
     var url = req.path.substring(1)
-    console.log(url)
     request(url, function (error, response, body) {
+      if (error) {
+        next(error);
+      }
       var doc = new JSDOM(body)
       var reader = new Readability(doc.window.document)
       var article = reader.parse()
-      res.render('readerView', {readerContent: cleanContent})
+      res.render('readerView', {readerContent: article.content})
     })
   }
   else {
