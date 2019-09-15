@@ -4,6 +4,8 @@ Mozilla's reader view as a web service
 The concept here is to be able to go to allow you to the reader view of any
 web page by just requesting a web page through this service.
 
+Mainly making this to experimient with Docker/Kubernetes and ways of deploying containers on AWS
+
 Current usage is making a requst to `/<your_webpage_url>` and it will return 
 the reader view html of the `your_webpage_url`
 
